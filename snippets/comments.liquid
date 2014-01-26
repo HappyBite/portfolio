@@ -1,0 +1,93 @@
+﻿{% assign comments_count = current_post.comments | size %}
+{% if comments_count > 0 %}
+<div id="comments{{ edit_comments_id }}">
+	<h3 id="comments-title">{{ comments_count }} svar på <em>{{ current_post_title }}</em></h3>
+	<ol class="commentlist">
+{% for comment in current_post.comments %}
+	<li id="li-comment-{{ comment.id }}" class="comment even thread-even depth-1">{{ comment | update_comment }}
+		<div id="comment-{{ comment.id }}">
+			<div class="comment-author vcard">
+				<img width="40" height="40" class="avatar avatar-40 photo" src="http://1.gravatar.com/avatar/3ef9900884a95b30af5819f8684e663a?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="">
+				<cite class="fn"><a class="url" rel="external nofollow" href="{{ comment.author_url }}">{{ comment.author }}</a></cite>
+				<span class="says">säger:</span>
+			</div>
+			<div class="comment-meta">
+				<a href="http://localhost/blog/2012/02/sssssss/#comment-2">
+					{{comment.date | date: 'dd' }}
+					{{comment.date | date: 'MMMM' }}
+					{{comment.date | date: 'yyyy' }}
+					kl. {{comment.date | date: 'HH:mm' }}
+				</a>
+			</div>
+			<div class="comment-body"><p>{{ comment.content }}</p>
+		</div>
+	</li>
+{% endfor %}
+</ol>
+</div>
+{% endif %}
+
+{% if current_post.comment_status == 'open' %}
+<div id="respond">
+	<h3 id="reply-title">Lämna en kommentar <small><a style="display:none" href="/blog/2012/02/sssssss/#respond" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h3>
+	<form id="commentform" method="post" action="/ho-includes/comments/ho-comments-post.aspx">
+	<p class="comment-notes">Din e-postadress kommer inte att publiceras. Obligatoriska fält är markerade med <span class="required">*</span></p>
+	{% comment %}
+	<p class="comment-form-author">
+		<label for="comment_author">Namn</label>
+		<span class="required">*</span>
+		<input type="text" value="" name="comment_author" id="comment_author" />
+	</p>
+	{% endcomment %}
+	<div class="control-group comment-form-author">
+		<label for="comment_author">Namn</label>
+		<div class="controls">
+			<input type="text" name="comment_author" id="comment_author" value="" class="span12">
+		</div>
+	</div>
+	{% comment %}
+	<p class="comment-form-email">
+		<label for="comment_email">Email</label>
+		<span class="required">*</span>
+		<input type="text" value="" name="comment_email" id="comment_email" />
+	</p>
+	{% endcomment %}
+	<div class="control-group comment-form-email">
+		<label for="comment_email">E-postadress</label>
+		<div class="controls">
+			<input type="text" name="comment_email" id="comment_email" value="" class="span12">
+		</div>
+	</div>
+	{% comment %}
+	<p class="comment-form-url">
+		<label for="comment_url">Hemsida</label>
+		<input type="text" value="" name="comment_url" id="comment_url" />
+	</p>
+	{% endcomment %}
+	<div class="control-group comment-form-email">
+		<label for="comment_url">Hemsida</label>
+		<div class="controls">
+			<input type="text" name="comment_url" id="comment_url" value="" class="span12">
+		</div>
+	</div>
+	{% comment %}
+	<p class="comment-form-comment">
+		<label for="comment">Kommentar</label>
+		<textarea rows="8" cols="45" name="comment_content" id="comment_content"></textarea>
+	</p>
+	{% endcomment %}
+	<div class="control-group comment-form-email">
+		<label for="comment">Kommentar</label>
+		<div class="controls">
+			<textarea rows="3" placeholder="Skriv en kommentar" name="comment_content" id="comment_content" value="" class="span12"></textarea>
+		</div>
+	</div>
+	<p class="form-submit">
+		<input class="btn" type="submit" value="Posta kommentar" id="submit" name="submit">
+		<input id="action" name="action" type="hidden" value="createComment"/>
+		<input type="hidden" id="post_id" value="{{ current_post.id }}" name="post_id">
+		<input type="hidden" value="0" id="comment_parent" name="comment_parent">
+	</p>
+	</form>
+</div>
+{% endif %}

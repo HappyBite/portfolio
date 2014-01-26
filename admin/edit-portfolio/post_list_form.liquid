@@ -1,0 +1,36 @@
+{% assign post_type_name = 'post_type' | get_param %}
+{% assign post_type = post_type_name | get_post_type %}
+{% assign post_collection = post_type_name | get_posts %}
+<h1>{{ post_type.labels.plural_name | capitalize }}</h1>
+<div class="Table">
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Titel</th>
+				<th>Författare</th>
+				<th>Kategorier</th>
+				<th>Etiketter</th>
+				<th>Kommentarer</th>
+				<th>Datum</th>
+				<th class="NoSort Edit"><a href="editpost.aspx?post_type={{ post_type_name }}" title="Skapa ny {{ post_type.labels.singular_name }}">Skapa ny {{ post_type.labels.singular_name }}</a></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in post_collection %}
+				<tr>
+					<td>{{ post.id }}</td>
+					<td><a href="editpost.aspx?page={{ post.id }}" title="Ändra post">{{ post.name }}</a></td>
+					<td>{{ post.creator_name }}</td>
+					<td>{{ post.creator_name }}</td>
+					<td>{{ post.creator_name }}</td>
+					<td>{{ post.created }}</td>
+					<td>{{ post.created }}</td>
+					<td class="Edit Active">
+						<a href="editposts.aspx?post_type={{ post_type_name }}&type={{ 'type' | get_param }}&page={{ post.id }}&action=delete_post_confirmation"></a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>		
+	</table>
+</div>

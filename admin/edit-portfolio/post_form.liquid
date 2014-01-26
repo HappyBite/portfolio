@@ -1,0 +1,60 @@
+{% assign post_type = 'portfolio-post' | get_post_type %}
+{% assign create_text = post_type.labels.add_new_item %}
+{% assign title = '' %}
+{% assign content = '' %}
+{% if current_post != null %}
+	{% assign title = current_post.title %}
+	{% assign content = current_post.content %}
+	{% assign create_text = post_type.labels.edit_item %}
+{% endif %}
+{% if current_post.status == 'published' or current_post != null %}
+	{% assign post_published_checked = ' checked="checked"' %}
+{% endif %}
+<div class="ho-TwoColumns ho-Clearfix" style="margin:0;">
+	<div class="ho-Column1" style="width: 70%;">
+		<div class="ho-ColumnContent">
+			<div class="ho-Row ho-Clearfix">
+				<label>Titel</label>
+				<input name="post_title" id="post_title" value="{{title | html_encode }}" type="text" required="required" />
+			</div>
+			<div class="ho-Row ho-clearfix">
+				<textarea name="post_content" id="post_content" type="xhtmleditor" data-init="true" style="height: 400px;">{{content | html_encode }}</textarea>
+			</div>
+		</div>
+	</div>
+	<div class="ho-Column2" style="width: 30%;">
+		<div class="ho-ColumnContent">
+			<div class="ho-box">
+				<div class="ho-header">
+					<div class="ho-title">Publicera</div>
+				</div>
+				<div class="ho-body">
+					<div class="ho-Row Last ho-Clearfix">
+						<input name="post_published" id="post_published"{{ post_published_checked }} type="checkbox" />
+							<label for="post_published">Publicera</label>
+					</div>
+					<div class="Buttons Right" style="display: none;">
+						<div class="ButtonSubmit">
+							<input class="ho-button ho-blue" type="submit" value="{{ create_text }}" />
+						</div>
+					</div>
+				</div>
+			</div>
+			{% render_property_list %}
+			{
+				"labels": {"plural_name":"Bilder","singular_name":"Bild"},
+				"option_name": "attached_images",
+				"type": "post",
+				"multiple": true,
+				"collapsed": false,
+				"list_type": "string",
+				"fields":
+				{
+					"id": {"edit_caption":"Bildreferens","type":"imagereference","default_value":"/global/images/post/1.jpg"}
+				}
+			}
+			{% endrender_property_list %}
+			{% render_taxonomies %}
+		</div>
+	</div>
+</div>

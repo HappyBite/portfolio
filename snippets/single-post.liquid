@@ -1,0 +1,15 @@
+﻿<div class="article block clearfix">{{ current_post | update_post }}
+	<h1 class="title">{{ current_post.title }}</h1>
+	{% get_template_part 'snippets/post-meta' %}
+	{% for image in current_post.images %}
+	{% unless image.url == empty %}
+	<div class="image block-half">
+		<img src="{{image.url}}" />
+	</div>
+	{% endunless %}
+	{% endfor %}
+	<div class="content">
+		{{ post.content }}
+	</div>
+</div>
+{% get_comments_template 'comments' %}

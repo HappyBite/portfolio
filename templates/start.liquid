@@ -1,0 +1,6 @@
+﻿{% if post_type_template == 'default' %}
+	{% get_template_part 'templates/index' %}
+{% endif %}
+{% if post_type_template == 'single' %}
+	{% get_template_part 'templates/single' %}
+{% endif %}

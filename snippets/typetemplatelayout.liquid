@@ -1,0 +1,41 @@
+﻿{% comment %}Pagelayout for portfolio{% endcomment %}
+{% set_type_template_layout true %}
+[
+	{
+		"type_template": "default",
+		"layout": "[sidebar1-maincontent]",
+		"sidebars":
+		[
+			{
+				"name": "sidebar-1",
+				"widgets":
+				[
+					{
+						"name": "postlist",
+						"position": 0,
+						"instance": {"title": "Nyheter","post_type": "portfolio-post","number_of_items": "4","sort": "ascending","number_of_chars": "0","link_text": "","type": "list",}
+					}
+				]
+			}
+		]
+	},
+	{
+		"type_template": "single",
+		"layout": "[sidebar1-maincontent]",
+		"sidebars":
+		[
+			{
+				"name": "sidebar-1",
+				"widgets":
+				[
+					{
+						"name": "postlist",
+						"position": 0,
+						"instance": {"title": "Nyheter","post_type": "portfolio-post","number_of_items": "4","sort": "ascending","number_of_chars": "0","link_text": "","type": "list",}
+					}
+				]
+			}
+		]
+	}
+]
+{% endset_type_template_layout %}
