@@ -4,7 +4,7 @@
 	{% for post in posts %}
 		<div id="article-{{post.id}}" class="article">{{ post | update_post }}
 			{% if forloop.first %}
-			
+			<hr />
 			{% endif %}
 			{% get_template_part 'snippets/post-meta' %}
 			<a href="{{post.url}}">{{post.title}}</a>
