@@ -1,0 +1,28 @@
+﻿{% assign every_fourth = forloop.index | modulo:4 %}
+{% if every_fourth == 1 %}<div class="row-fluid">{% endif %}
+	<div id="post-{{post.id}}" data-id="post-{{post.id}}" class="post span3">{{ post | update_post }}
+	{% for image in post.images %}
+		{% if forloop.first %}
+			<div class="image">
+				{% comment %}
+				<a href="{{post.url}}" class="hover-wrap"><span class="overlay-img"></span><span class="overlay-img-thumb con-plus">Gå till posten</span></a>
+				{% endcomment %}
+				<a href="{{post.url}}">
+					<img src="{{image.url}}" />
+				</a>
+			</div>
+		{% endif %}
+	{% endfor %}
+	<div class="text">
+		<h2 class="title"><a href="{{post.url}}">{{post.title}}</a></h2>
+		<div class="content">
+			{{post.content | strip_html | truncate: 50 }}
+		</div>
+	</div>
+</div>
+{% if every_fourth == 0 %}
+</div>
+{% endif %}
+{% if forloop.last and every_fourth != 0 %}
+</div>
+{% endif %}
