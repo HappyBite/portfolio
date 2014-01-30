@@ -1,14 +1,9 @@
-﻿{% assign posts = 'portfolio-post' | get_posts %}
-<div class="page-header"><h1>Nyheter</h1></div>
-<div class="articles block clearfix{{ edit_posts_id }}">
+<div class="page-header">
+	<h1>Portfolio</h1>
+</div>
+<div class="posts block{{ edit_posts_id }}">
+	{% assign posts = 'portfolio-post' | get_posts %}
 	{% for post in posts %}
-		<div id="article-{{post.id}}" class="article">{{ post | update_post }}
-			{% if forloop.first %}
-			<hr />
-			{% endif %}
-			{% get_template_part 'snippets/post-meta' %}
-			<a href="{{post.url}}">{{post.title}}</a>
-			<hr />
-		</div>
+		{% get_template_part 'partials/post' %}
 	{% endfor %}
 </div>
