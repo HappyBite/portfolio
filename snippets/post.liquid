@@ -23,3 +23,6 @@
 {% if every_fourth == 0 %}
 </div>
 {% endif %}
+{% if forloop.last and every_fourth != 0 %}
+</div>
+{% endif %}
