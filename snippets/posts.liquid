@@ -1,7 +1,7 @@
 <div class="page-header">
 	<h1>Portfolio</h1>
 </div>
-<div class="posts{{ edit_posts_id }}">
+<div class="posts block{{ edit_posts_id }}">
 	{% assign posts = 'portfolio-post' | get_posts %}
 	{% for post in posts %}
 		{% get_template_part 'snippets/post' %}
