@@ -2,24 +2,24 @@
 -----------------------------------------------
 Layout: Portfolio
 -----------------------------------------------*/
-.200 {}
+.portfolio-1 {}
 /*Posts*/
-.200 .post {margin-bottom: 20px;position: relative;}
-.200 .post .title {font-weight: bold;margin: 0 0 5px 0;line-height: 20px;}
-.200 .post .title a {color: {{ settings.layout_portfolio_post_heading_color }};font-size: 14px;font-weight: bold;text-decoration: none;}
-.200 .post .image {border: 1px solid #eee;margin: 0;position: relative;}
-.200 .post:hover .image {opacity: .75;}
-.200 .post .image img {display: block;max-width: 100%;idth: 263px;eight: 393px;}
+.portfolio-1 .post {margin-bottom: 20px;position: relative;}
+.portfolio-1 .post .title {font-weight: bold;margin: 0 0 5px 0;line-height: 20px;}
+.portfolio-1 .post .title a {color: {{ settings.layout_portfolio_post_heading_color }};font-size: 14px;font-weight: bold;text-decoration: none;}
+.portfolio-1 .post .image {border: 1px solid #eee;margin: 0;position: relative;}
+.portfolio-1 .post:hover .image {opacity: .75;}
+.portfolio-1 .post .image img {display: block;max-width: 100%;idth: 263px;eight: 393px;}
 /*Single post*/
-.200 #post {}
-.200 #post .title {font-weight: 400;}
-.200 #post .image {}
-.200 #post .image img {}
-.200 #post .details {}
-.200 #post .text {margin-bottom: 15px;}
+.portfolio-1 #post {}
+.portfolio-1 #post .title {font-weight: 400;}
+.portfolio-1 #post .image {}
+.portfolio-1 #post .image img {}
+.portfolio-1 #post .details {}
+.portfolio-1 #post .text {margin-bottom: 15px;}
 /*Post images*/
-.200 .post-images {}
-.200 .post-images ul {list-style:none;margin:0;padding:0;}
-.200 .post-images li {border: 1px solid #eee;margin-bottom: 15px;}
-.200 .post-images a {outline:none}
-.200 .post-images img {}
+.portfolio-1 .post-images {}
+.portfolio-1 .post-images ul {list-style:none;margin:0;padding:0;}
+.portfolio-1 .post-images li {border: 1px solid #eee;margin-bottom: 15px;}
+.portfolio-1 .post-images a {outline:none}
+.portfolio-1 .post-images img {}
