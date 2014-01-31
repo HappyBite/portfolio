@@ -9,7 +9,7 @@ Layout: Portfolio
 .portfolio-1 .post .title a {color: {{ settings.layout_portfolio_post_heading_color }};font-size: 14px;font-weight: bold;text-decoration: none;}
 .portfolio-1 .post .image {border: 1px solid #eee;margin: 0;position: relative;}
 .portfolio-1 .post:hover .image {opacity: .75;}
-.portfolio-1 .post .image img {display: block;max-width: 100%;idth: 263px;eight: 393px;}
+.portfolio-1 .post .image img {display: block;max-width: 100%;}
 /*Single post*/
 .portfolio-1 #post {}
 .portfolio-1 #post .title {font-weight: 400;}
