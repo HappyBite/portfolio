@@ -1,6 +1,6 @@
-﻿{% assign every_fourth = forloop.index | modulo:4 %}
+{% assign every_fourth = forloop.index | modulo:4 %}
 {% if every_fourth == 1 %}<div class="row-fluid">{% endif %}
-<div id="post-{{post.id}}" data-id="post-{{post.id}}" class="post span3">{{ post | update_post }}
+	<div id="post-{{post.id}}" data-id="post-{{post.id}}" class="post span3">{{ post | update_post }}
 	{% for image in post.images %}
 		{% if forloop.first %}
 			<div class="image">
