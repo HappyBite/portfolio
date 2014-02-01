@@ -3,23 +3,46 @@
 Layout: Portfolio
 -----------------------------------------------*/
 .portfolio-1 {}
-/*Posts*/
-.portfolio-1 .post {margin-bottom: 20px;position: relative;} 
-.portfolio-1 .post .title {font-weight: bold;margin: 0 0 5px 0;line-height: 20px;}
-.portfolio-1 .post .title a {color: {{ settings.layout_portfolio_post_heading_color }};font-size: 14px;font-weight: bold;text-decoration: none;}
-.portfolio-1 .post .image {border: 1px solid #eee;margin: 0;position: relative;}
+/*post*/
+.portfolio-1 .post {margin-bottom: 20px;position: relative;}
+.portfolio-1 .post {margin-bottom: 20px;position: relative;}
+.portfolio-1 .post .title {color: {{ settings.global_headings_color }};font-weight: bold;margin: 0 0 5px 0;line-height: 20px;}
+.portfolio-1 .post .title a {color: {{ settings.global_headings_color }};font-size: 14px;font-weight: bold;text-decoration: none;}
+.portfolio-1 .post .image {border: 1px solid #DDD;margin: 0 0 10px 0;transition: opacity 0.15s ease 0s;}
 .portfolio-1 .post:hover .image {opacity: .75;}
 .portfolio-1 .post .image img {display: block;max-width: 100%;}
+.portfolio-1 .post .text {}
+.portfolio-1 .post a:hover {}
 /*Single post*/
 .portfolio-1 #post {}
-.portfolio-1 #post .title {font-weight: 400;}
+.portfolio-1 #post .title {font-weight: 400;font-family: Asap,'Lucida Grande',Helvetica,Arial,sans-serif;}
+.portfolio-1 #post .presentation {}
 .portfolio-1 #post .image {}
 .portfolio-1 #post .image img {}
+.portfolio-1 #post .price {font-family: Asap,'Lucida Grande',Helvetica,Arial,sans-serif;font-size: 24px;margin-bottom: 13px;}
+.portfolio-1 #post .price .ordinary-price {text-decoration: line-through;}
+.portfolio-1 #post .price .sale-price {}
 .portfolio-1 #post .details {}
-.portfolio-1 #post .text {margin-bottom: 15px;}
-/*Post images*/
-.portfolio-1 .post-images {}
+.portfolio-1 #post .text {float: left;margin-bottom: 15px;width: 100%;}
+.portfolio-1 #post .text p:last-child {margin-bottom: 0;}
+.portfolio-1 #post .terms {list-style: none;padding: 0;}
+.portfolio-1 #post .terms li {font-weight: normal;margin: 0 0 2px;text-transform: uppercase;}
+.portfolio-1 #post .terms li a {padding-left: 0;text-decoration: none;white-space: nowrap;}
+.portfolio-1 #post .terms li a:hover {text-decoration: underline;}
+/*Related posts*/
+.portfolio-1 .related-posts__title {border-bottom: 1px solid {{ settings.global_general_border_color }};font-size: 20px;line-height: 28px;margin-bottom: 43px;padding-bottom: 30px;}
+/*post images*/
+.portfolio-1 .post-images {margin-bottom:10px;}
+.portfolio-1 .post-images h3 {margin: 0 0 10px 0;padding: 0;}
 .portfolio-1 .post-images ul {list-style:none;margin:0;padding:0;}
-.portfolio-1 .post-images li {border: 1px solid #eee;margin-bottom: 15px;}
+.portfolio-1 .post-images li {border: 1px solid #DDD;margin-bottom: 15px;}
 .portfolio-1 .post-images a {outline:none}
 .portfolio-1 .post-images img {}
+/*Browse tags*/
+.portfolio-1 .browse-categories {float: right;margin-top: 8px;}
+.portfolio-1 .browse-categories label {float: left;line-height: 29px;margin: 0 10px 0 0;}
+.portfolio-1 .browse-categories select {float: left;width: auto;}
+/*Filter tags*/
+.portfolio-1 .filter-tags {display:none;clear:both;}
+/*Terms*/
+.portfolio-1 .terms {float: left;margin: 0 0 15px 0;}
