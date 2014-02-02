@@ -1,3 +1,4 @@
+alert('asdf');
 closeout = {};
 closeout.startUp = function() {
 	$('.post-images a').click(function(e) {

@@ -14,7 +14,7 @@ Layout: Portfolio
 .portfolio-1 .post .text {}
 .portfolio-1 .post a:hover {}
 /*Single post*/
-.portfolio-1 #post {}
+.portfolio-1 #post {}  
 .portfolio-1 #post .title {font-weight: 400;font-family: Asap,'Lucida Grande',Helvetica,Arial,sans-serif;}
 .portfolio-1 #post .presentation {}
 .portfolio-1 #post .image {}
