@@ -59,7 +59,7 @@
 			[
 				{
 					"name": "portfolio_style",
-					"url": "css/style.css",
+					"url": "css/style.css", 
 					"in_footer": false,
 				},
 			],
