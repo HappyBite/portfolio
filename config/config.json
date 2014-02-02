@@ -23,8 +23,8 @@
 		{
 			"show_in_create_page": true,
 			"show_in_select_list": true,
-			"list_form": "/admin/edit-portfolio/post_list_form.liquid",
-			"form": "/admin/edit-portfolio/post_form.liquid",
+			"list_form": "admin/edit-portfolio/post_list_form.liquid",
+			"form": "admin/edit-portfolio/post_form.liquid",
 			"icon_add": "/cms/images/back/icons/report_add.png",
 			"icon_edit": "/cms/images/back/icons/report_edit.png",
 			"rewrite":
