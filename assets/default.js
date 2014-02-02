@@ -1,7 +1,6 @@
 closeout = {};
 closeout.startUp = function() {
 	$('.post-images a').click(function(e) {
-		alert('dfasdf')
 		var imagePlaceholder = $('#image-placeholder');
 		var imageUrl = $(this).attr('href');
 		imagePlaceholder.find('a').attr('href', imageUrl);
