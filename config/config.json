@@ -1,0 +1,68 @@
+{
+        "menu":
+        {
+        	"display_name": "Portfolio",
+        	"description": "",
+        	"icon": "/global/images/icon/1.png",
+        	"menu_items":
+        	[{
+			"name": "Poster",
+			"icon": "/cms/images/back/icons/page.png", 
+			"url": "editposts.aspx?post_type=portfolio-post",
+		},
+                {
+        		"name": "Portfolio",
+		       	"icon": "/global/images/icon/1.png",
+		       	"uri": "admin.aspx?app_id=200",
+	        }]
+        },
+        "post_types":
+	[{
+		"name": "portfolio-post",
+		"options":
+		{
+			"show_in_create_page": true,
+			"show_in_select_list": true,
+			"list_form": "/admin/edit-portfolio/post_list_form.liquid",
+			"form": "/admin/edit-portfolio/post_form.liquid",
+			"icon_add": "/cms/images/back/icons/report_add.png",
+			"icon_edit": "/cms/images/back/icons/report_edit.png",
+			"rewrite":
+			{
+				"slug": "post",
+			},
+			"labels":
+			{
+				"name": "Portfolio",
+				"plural_name": "poster",
+				"singular_name": "post",
+				"add_new": "Skapa ny",
+				"add_new_item": "Skapa ny post",
+				"edit_item": "Ändra post",
+				"new_item": "Ny post",
+				"all_items": "Alla poster",
+			}
+		},
+	}],
+        "register":
+	[
+		{
+			"scripts":
+			[
+				{
+					"name": "portfolio_script",
+					"url": "/assets/default.js",
+					"in_footer": false,
+				},
+			],
+			"styles":
+			[
+				{
+					"name": "portfolio_style",
+					"url": "/css/style.css",
+					"in_footer": false,
+				},
+			],
+		}
+	],
+}
