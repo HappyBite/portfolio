@@ -4,6 +4,6 @@
 <div class="posts block{{ edit_posts_id }}">
 	{% assign posts = 'portfolio-post' | get_posts %}
 	{% for post in posts %}
-		{% get_template_part 'snippets/posts' %}
-	{% endfor %} 
+		{% get_template_part 'snippets/post' %}
+	{% endfor %}
 </div>
