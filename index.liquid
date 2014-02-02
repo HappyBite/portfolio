@@ -1,8 +1,8 @@
 {% if page.list_type == 'portfolio-post' %}
     {% if post_type_template == 'default' %}
-    	{% get_template_part 'templates/portfolio-post/index' %}
+    	{% get_template_part 'templates/portfolio/index' %}
     {% endif %}
     {% if post_type_template == 'single' %}
-    	{% get_template_part 'templates/portfolio-post/single' %}
+    	{% get_template_part 'templates/portfolio/single' %}
     {% endif %}
 {% endif %}
