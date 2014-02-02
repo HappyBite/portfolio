@@ -1,14 +1,13 @@
 var portfolio = {};
 portfolio.startUp = function() {
 	$('.post-images a').click(function(e) {
-		alert('ddd');
 		var imagePlaceholder = $('#image-placeholder');
 		var imageUrl = $(this).attr('href');
 		imagePlaceholder.find('a').attr('href', imageUrl);
 		imagePlaceholder.find('img').attr('src', imageUrl);
 		return false;
 	});
-	$('.portfolio #image-placeholder a').fancybox({
+	$('.portfolio-1 #image-placeholder a').fancybox({
 		openEffect	: 'elastic',
     	closeEffect	: 'elastic',
     	helpers : {
