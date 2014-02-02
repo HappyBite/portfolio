@@ -1,5 +1,5 @@
-closeout = {};
-closeout.startUp = function() {
+var portfolio = {};
+portfolio.startUp = function() {
 	$('.post-images a').click(function(e) {
 		alert('ddd');
 		var imagePlaceholder = $('#image-placeholder');
@@ -8,7 +8,7 @@ closeout.startUp = function() {
 		imagePlaceholder.find('img').attr('src', imageUrl);
 		return false;
 	});
-	$('.closeout #image-placeholder a').fancybox({
+	$('.portfolio #image-placeholder a').fancybox({
 		openEffect	: 'elastic',
     	closeEffect	: 'elastic',
     	helpers : {
@@ -19,5 +19,5 @@ closeout.startUp = function() {
 	});
 }
 $(document).ready(function() {
-closeout.startUp();
+    portfolio.startUp();
 });
