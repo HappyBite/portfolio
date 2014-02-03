@@ -2,7 +2,7 @@
 	<h1>Portfolio</h1>
 </div>
 <div class="posts block{{ edit_posts_id }}">
-	{% assign posts = 'portfolio-post' | get_posts %}
+	{% assign posts = post.list_typ | get_posts %}
 	{% for post in posts %}
 		{% get_template_part 'snippets/post' %}
 	{% endfor %}
