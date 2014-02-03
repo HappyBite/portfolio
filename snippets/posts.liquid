@@ -2,8 +2,7 @@
 	<h1>Portfolio</h1>
 </div>
 <div class="posts block{{ edit_posts_id }}">
-
-	{% for post in posts %}
+	{% for post in post %}
 		{% get_template_part 'snippets/post' %}
 	{% endfor %}
 </div>
