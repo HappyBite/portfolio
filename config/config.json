@@ -1,22 +1,22 @@
 {
-        "menu":
-        {
-        	"display_name": "Portfolio",
-        	"description": "",
-        	"icon": "/global/images/icon/1.png",
-        	"menu_items":
-        	[{
-			"name": "Poster",
-			"icon": "/cms/images/back/icons/page.png", 
-			"url": "editposts.aspx?post_type=portfolio-post",
-		},
-                {
-        		"name": "Portfolio",
-		       	"icon": "/global/images/icon/1.png",
-		       	"uri": "admin.aspx?app_id=200",
-	        }]
+    "menu":
+    {
+    	"display_name": "Portfolio",
+    	"description": "",
+    	"icon": "/global/images/icon/1.png",
+    	"menu_items":
+    	[{
+    	"name": "Poster",
+    	"icon": "/cms/images/back/icons/page.png", 
+    	"url": "editposts.aspx?post_type=portfolio-post",
         },
-        "post_types":
+        {
+    		"name": "Portfolio",
+           	"icon": "/global/images/icon/1.png",
+           	"uri": "admin.aspx?app_id=200",
+        }]
+    },
+    "post_types":
 	[{
 		"name": "portfolio-post",
 		"options":
