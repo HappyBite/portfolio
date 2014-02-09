@@ -6,7 +6,9 @@
 	<table>
 		<thead>
 			<tr>
+			    <!--
 				<th>ID</th>
+				-->
 				<th>Titel</th>
 				<th>Författare</th>
 				<!--
@@ -21,7 +23,9 @@
 		<tbody>
 			{% for post in post_collection %}
 			<tr>
+				<!--
 				<td>{{ post.id }}</td>
+				-->
 				<td><a href="editpost.aspx?page={{ post.id }}" title="Ändra post">{{ post.name }}</a></td>
 				<td>{{ post.creator_name }}</td>
 				<!--
