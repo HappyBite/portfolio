@@ -55,6 +55,7 @@ function performRequest(endpoint, method, data, success) {
     res.on('end', function() {
       //console.log(responseString);
       var responseObject = JSON.parse(responseString);
+      //var responseObject = responseString;
       success(responseObject);
     });
   });
@@ -66,6 +67,15 @@ function performRequest(endpoint, method, data, success) {
 performRequest('/users/HappyBite/repos', 'GET', {
     access_token: '32d4271fe0546ea3dbf535812aa7dfdce2c98f82',
   }, function(data) {
-    sessionId = data[0].full_name;
+    //sessionId = data[0].full_name;
+    sessionId = data
     console.log('Logged in:', sessionId);
 });
+
+
+
+
+
+
+
+
