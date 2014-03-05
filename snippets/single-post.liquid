@@ -15,14 +15,14 @@
     				{% endfor %}
     			</div>
 			
-			    <div class="row-fluid block">
+			    <div class="block">
 					{% for image in post.images %}
     				{% if forloop.first %}
-    				<div class="post-images span3">
-    					<ul>
+    				<div class="post-images">
+    					<ul class="row-fluid">
     						{% endif %}
     						<!--% unless forloop.first %-->
-    						<li>
+    						<li class="span3">
     							<a href="{{image.url}}">
     								<img src="{{image.url}}" />
     							</a>
