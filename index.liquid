@@ -1,3 +1,4 @@
+{% assign posts = 'portfolio-post' | get_posts %}
 {% if page.list_type == 'portfolio-post' %}
     {% if post_type_template == 'index' %}
     	{% get_template_part 'templates/portfolio/index' %}
