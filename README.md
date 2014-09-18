@@ -1,4 +1,4 @@
-portfolio
+Portfolio
 =========
 
-My first app
+My first plugin
