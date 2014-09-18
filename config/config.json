@@ -6,9 +6,9 @@
     	"icon": "/global/images/icon/1.png",
     	"menu_items":
     	[{
-    	"name": "Poster",
-    	"icon": "/cms/images/back/icons/page.png", 
-    	"url": "editposts.aspx?post_type=portfolio-post",
+    		"name": "Poster",
+    		"icon": "/cms/images/back/icons/page.png", 
+    		"url": "editposts.aspx?post_type=portfolio-post",
         },
         {
     		"name": "Portfolio",

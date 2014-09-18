@@ -28,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log('hehe')
 
+console.log('heheasfdasdfasdfasdfasdfasdfsdfasdf')
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

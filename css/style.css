@@ -35,9 +35,9 @@ Layout: Portfolio
 .portfolio-1 .post-images {margin-bottom:10px;}
 .portfolio-1 .post-images h3 {margin: 0 0 10px 0;padding: 0;}
 .portfolio-1 .post-images ul {list-style:none;margin:0;padding:0;}
-.portfolio-1 .post-images li {border: 1px solid #DDD;margin-bottom: 15px;}
+.portfolio-1 .post-images li {margin-bottom: 15px;}
 .portfolio-1 .post-images a {outline:none}
-.portfolio-1 .post-images img {}
+.portfolio-1 .post-images img {border: 1px solid #DDD;}
 /*Browse tags*/
 .portfolio-1 .browse-categories {float: right;margin-top: 8px;}
 .portfolio-1 .browse-categories label {float: left;line-height: 29px;margin: 0 10px 0 0;}
