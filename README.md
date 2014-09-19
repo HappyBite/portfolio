@@ -1,4 +1,4 @@
 Portfolio
 =========
 
-My first plugin hehe
+My first plugin
