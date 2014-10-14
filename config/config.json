@@ -50,16 +50,16 @@
 			"scripts":
 			[
 				{
-					"name": "portfolio_script",
-					"url": "assets/default.js",
+					"handle": "portfolio_script",
+					"src": "assets/default.js",
 					"in_footer": false,
 				},
 			],
 			"styles":
 			[
 				{
-					"name": "portfolio_style",
-					"url": "css/style.css", 
+					"handle": "portfolio_style",
+					"src": "css/style.css", 
 					"in_footer": false,
 				},
 			],
